@@ -49,6 +49,7 @@ public class JSAlertTest {
 
         String confirmMesaji = driver.switchTo().alert().getText();
         System.out.println(confirmMesaji);
+        //alertin icindeki "cancel" butonuna tiklar
         driver.switchTo().alert().dismiss();
         driver.switchTo().alert().accept();
 
@@ -57,7 +58,7 @@ public class JSAlertTest {
     @Test
     public void jsPromptTest(){
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-//<button onclick="jsPrompt()">Click for JS Prompt</button>
+       //<button onclick="jsPrompt()">Click for JS Prompt</button>
         WebElement button = driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
         button.click();
         String mesaj = driver.switchTo().alert().getText();
