@@ -28,11 +28,11 @@ public class Ornek_HotelOlusturma extends TestBase {
         WebElement idGrup     = driver.findElement(By.id("IDGroup"));
         WebElement saveButonu = driver.findElement(By.id("btnSubmit"));
 
-        driver.findElement(By.id("Code")).sendKeys("12345");
-        driver.findElement(By.id("Name")).sendKeys("salih");
-        driver.findElement(By.id("Address")).sendKeys("Mercedes 606.BuenosAires");
-        driver.findElement(By.id("Phone")).sendKeys("00543513005500");
-        driver.findElement(By.id("Email")).sendKeys("buenosaires.sy19@gmail.com");
+        codeKutusu.sendKeys("12345");
+        nameKutusu.sendKeys("salih");
+        adresKutusu.sendKeys("Mercedes 606.BuenosAires");
+        phoneKutusu.sendKeys("00543513005500");
+        emailKutusu.sendKeys("buenosaires.sy19@gmail.com");
 
 
         WebElement dropDown = driver.findElement(By.id("IDGroup"));
