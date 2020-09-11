@@ -54,7 +54,7 @@ public class ActionClassTest extends TestBase {
     }
     @Test
     public void buyukKucukYazma(){
-        // MERHABA nasılsınız.
+        // MERHABA nasılsınız
         driver.get("http://google.com");
         // name="q"
         WebElement aramaKutusu = driver.findElement(By.name("q"));

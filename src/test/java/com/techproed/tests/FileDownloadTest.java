@@ -24,7 +24,7 @@ public class FileDownloadTest extends TestBase {
         WebElement dosyaSecmeButonu = driver.findElement(By.id("file-upload"));
 
         // yüklemek istediğimiz dosyanın, path(dosya yolunu) ekleyelim.
-        dosyaSecmeButonu.sendKeys("C:/Users/lenov/OneDrive/Escritorio/logo.png");
+        dosyaSecmeButonu.sendKeys("C:/Users/lenov/OneDrive/Escritorio/logo.png/logo.png");
        // dosyaSecmeButonu.sendKeys("C:/Users/lenov/OneDrive/Escritorio/logo.png");
 
         WebElement uploadButonu = driver.findElement(By.id("file-submit"));
@@ -35,16 +35,16 @@ public class FileDownloadTest extends TestBase {
     }
     @Test
     public void dosyaDownload(){
-        // C:\Users\isimsiz\Downloads\Amsterdam.jpg
+        // C:\Users\lenov\Downloads
         driver.get("http://the-internet.herokuapp.com/download");
-        WebElement amsterdamLinki = driver.findElement(By.partialLinkText("Amsterdam.jpg"));
-        amsterdamLinki.click();
+        WebElement penguinsLinki = driver.findElement(By.partialLinkText("Penguins.jpg"));
+        penguinsLinki.click();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        boolean varMi = Files.exists(Paths.get("C:\\Users\\isimsiz\\Downloads\\Amsterdam.jpg"));
+        boolean varMi = Files.exists(Paths.get("C:\\Users\\lenov\\Downloads\\Penguins.jpg"));
         Assert.assertTrue(varMi);
     }
 }

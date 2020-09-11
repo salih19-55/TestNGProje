@@ -82,4 +82,5 @@ public class WebTablesTest extends TestBase {
         WebElement hucre = driver.findElement(By.xpath(xpathDegerim));
         System.out.println(hucre.getText());
     }
+
 }
