@@ -24,4 +24,5 @@ public class FhcTripHotelCreatePage {
     @FindBy (id = "btnSubmit")
     public WebElement saveButonu;
 
+
 }

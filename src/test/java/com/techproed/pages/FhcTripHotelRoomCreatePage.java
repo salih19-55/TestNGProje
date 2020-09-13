@@ -7,49 +7,38 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FhcTripHotelRoomCreatePage {
     WebDriver driver;
-    public FhcTripHotelRoomCreatePage(WebDriver driver){
-           this.driver = driver;
-        PageFactory.initElements(driver,this);
+    public FhcTripHotelRoomCreatePage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
 
+    }
 
-    }@FindBy(id="IDHotel")
+    @FindBy ( id = "IDHotel" )
     public WebElement idHotelDropDown;
-
-    @FindBy(id="Code")
+    @FindBy ( id = "Code")
     public WebElement codeKutusu;
-
-    @FindBy(id= "Name")
+    @FindBy ( id = "Name" )
     public WebElement nameKutusu;
-
-    @FindBy(id= "Location")
-    public WebElement locatiKutusu;
-
-    @FindBy(xpath = "//texttarea[@dir='ltr']")
+    @FindBy ( id = "Location")
+    public WebElement locationKutusu;
+    @FindBy ( xpath = "//textarea[@dir='ltr']")
     public WebElement descKutusu;
-
-    @FindBy(id = "Price")
+    @FindBy ( id = "Price")
     public WebElement priceKutusu;
-
-    @FindBy(partialLinkText = "500")
+    @FindBy ( partialLinkText = "500" )
     public WebElement price500;
-
-    @FindBy(id = "IDGroupRoomType")
-    public WebElement idRoomGroupRoomTypeDropDown;
-
-    @FindBy(id = "MaxAdultCount")
+    @FindBy ( id = "IDGroupRoomType")
+    public WebElement idGroupRoomTypeDropDown;
+    @FindBy ( id = "MaxAdultCount" )
     public WebElement maxAdultCountKutusu;
-
-    @FindBy(id = "MaxChildCount")
+    @FindBy ( id = "MaxChildCount" )
     public WebElement maxChildCountKutusu;
-
-    @FindBy(id = "IsAvailable")
-    public WebElement isAvailableButonu;
-
-    @FindBy(id = "btnSubmit")
+    @FindBy ( id = "IsAvailable" )
+    public WebElement approved;
+    @FindBy ( id = "btnSubmit" )
     public WebElement saveButonu;
 
     @FindBy ( xpath = "//*[.='HotelRoom was inserted successfully']")
     public WebElement basariliYazisi;
-
 
 }
