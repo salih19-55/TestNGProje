@@ -1,8 +1,6 @@
 package com.techproed.utilities;
-
 import java.io.FileInputStream;
 import java.util.Properties;
-
 public class ConfigurationReader {
     // ConfigurationReader class'ını projemizin heryerinden
     // nesne üretmeden, miras almadan kullanabilecek şekilde tasarlayalım.
@@ -24,15 +22,8 @@ public class ConfigurationReader {
         }
     }
     //  properties.getProperty("username")  --> manager2
-        public static String getProperty(String key){
-
+    public static String getProperty(String key){
         return properties.getProperty(key);
-
     }
-
-
-
-
-
-
+    // ConfigurationReader.getProperty("fb_email") --- > hamza@techproed.com
 }
